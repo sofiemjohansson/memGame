@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Amazing Memory Game 💮</title>
+    <link rel="icon" type="image/x-icon" href="/img/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300|Coda|Kaushan+Script">
+    <script src="https://use.fontawesome.com/f0cb29eb07.js"></script>
+</head>
+<body>
+<div class="container">
+    <header>Welcome to the amazing memory game</header>
+
+    <!-- STATS -->
+    <div class="score-panel">
+        <ul class="stars">
+            <li id="star-one"><i class="fa fa-star" aria-hidden="true"></i></li>
+            <li id="star-two"><i class="fa fa-star" aria-hidden="true"></i></li>
+            <li id="star-three"><i class="fa fa-star" aria-hidden="true"></i></li>
+            <br>
+            <span id="moves-counter" class="moves">0 moves</span>
+        </ul>
+    </div>
+
+<!-- BUTTONS -->
+    <div class="buttons">
+        <button class="start-btn" title="Start game" onclick="ShowAndHide();this.style.visibility='hidden';">Start game
+        </button>
+        <button class="exit-btn" title="Exit game" onClick="window.location.reload();">End game
+        </button>
+        <button class="reload-btn"  title="Reset game" onClick="window.location.reload();">Reset game
+        </button>
+    </div>
+    <div id="hidden" style="display: none">
+        <div id="board" class="deck">
+        </div>
+    </div>
+
+    <!-- MODAL POPUP -->
+    <div id="popup-window" class="modal">
+        <div class="modal-content">
+            <h3>Congratulations, you won!</h3>
+
+           <!-- /* todo
+            <p>Your rating was:<span id="rating-info"></span></p>-->
+
+
+            <button id="modal-btn" onClick="window.location.reload();">
+                <i class="fas fa-redo"></i>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+    <p>Sofie Johansson</p>  <a href="https://github.com/sofiemjohansson"><i class="fab fa-github"></i></a> <a href="https://www.linkedin.com/in/sofie-johansson-21143140/"><i class="fab fa-linkedin"></i></a>
+    </footer><p>Images from<a href="https://pixabay.com/">     Pixabay</a></p>
+
+    </footer>
+</div>
+</body>
+<script src="app.js"></script>
+</html>
